@@ -15,7 +15,7 @@ namespace homeWorkSixСlinic
             patients = Convert.ToInt32( Console.ReadLine() );
             int appointmenTime = 10;
             int minutesInHours = 60;
-            int minutesInQueue = patients * appointmenTime;
+            int totalWaitingTimeInMinutes = patients * appointmenTime;
             int queueTimeHours = minutesInQueue / minutesInHours;
             int queueTimeMinutes = minutesInQueue % minutesInHours;
             Console.WriteLine($"Вы должны отстоять в очереди {queueTimeHours} " +
