@@ -11,12 +11,13 @@ namespace homeWorkSixСlinic
         static void Main(string[] args)
         {
             int patients;
-            Console.Write($"Введите кол-во пациентов: ");
+            Console.Write("Введите кол-во пациентов: ");
             patients = Convert.ToInt32( Console.ReadLine() );
             int appointmenTime = 10;
             int minutesInHours = 60;
-            int queueTimeHours = patients * appointmenTime / minutesInHours;
-            int queueTimeMinutes = patients * appointmenTime % minutesInHours;
+            int minutesInQueue = patients * appointmenTime;
+            int queueTimeHours = minutesInQueue / minutesInHours;
+            int queueTimeMinutes = minutesInQueue % minutesInHours;
             Console.WriteLine($"Вы должны отстоять в очереди {queueTimeHours} " +
                 $"часов и {queueTimeMinutes} минут.");
         }
